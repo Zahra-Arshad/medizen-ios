@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D3A53262614FA7D0014ABF8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3A53252614FA7D0014ABF8 /* HomeViewController.swift */; };
 		8DBA548B260E559400D89E8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA548A260E559400D89E8A /* AppDelegate.swift */; };
 		8DBA548D260E559400D89E8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA548C260E559400D89E8A /* SceneDelegate.swift */; };
 		8DBA548F260E559400D89E8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA548E260E559400D89E8A /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D3A53252614FA7D0014ABF8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8DBA5487260E559400D89E8A /* medizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = medizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBA548A260E559400D89E8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DBA548C260E559400D89E8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D3A53202614F7B60014ABF8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8DBA548E260E559400D89E8A /* ViewController.swift */,
+				8D3A53252614FA7D0014ABF8 /* HomeViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8D3A53212614F7D30014ABF8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8DBA5493260E559500D89E8A /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		8D3A53222614F7E40014ABF8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8DBA548A260E559400D89E8A /* AppDelegate.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8D3A53232614F7F20014ABF8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8DBA5490260E559400D89E8A /* Main.storyboard */,
+				8DBA5495260E559500D89E8A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		8DBA547E260E559400D89E8A = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +92,11 @@
 		8DBA5489260E559400D89E8A /* medizen */ = {
 			isa = PBXGroup;
 			children = (
-				8DBA548A260E559400D89E8A /* AppDelegate.swift */,
+				8D3A53232614F7F20014ABF8 /* Storyboards */,
+				8D3A53222614F7E40014ABF8 /* Classes */,
+				8D3A53212614F7D30014ABF8 /* Assets */,
+				8D3A53202614F7B60014ABF8 /* View Controllers */,
 				8DBA548C260E559400D89E8A /* SceneDelegate.swift */,
-				8DBA548E260E559400D89E8A /* ViewController.swift */,
-				8DBA5490260E559400D89E8A /* Main.storyboard */,
-				8DBA5493260E559500D89E8A /* Assets.xcassets */,
-				8DBA5495260E559500D89E8A /* LaunchScreen.storyboard */,
 				8DBA5498260E559500D89E8A /* Info.plist */,
 			);
 			path = medizen;
@@ -140,6 +175,7 @@
 				8DBA548F260E559400D89E8A /* ViewController.swift in Sources */,
 				8DBA548B260E559400D89E8A /* AppDelegate.swift in Sources */,
 				8DBA548D260E559400D89E8A /* SceneDelegate.swift in Sources */,
+				8D3A53262614FA7D0014ABF8 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
