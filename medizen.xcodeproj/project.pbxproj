@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D3A53262614FA7D0014ABF8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3A53252614FA7D0014ABF8 /* HomeViewController.swift */; };
+		8D3A53292614FE010014ABF8 /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3A53282614FE010014ABF8 /* Medication.swift */; };
 		8DBA548B260E559400D89E8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA548A260E559400D89E8A /* AppDelegate.swift */; };
 		8DBA548D260E559400D89E8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA548C260E559400D89E8A /* SceneDelegate.swift */; };
 		8DBA548F260E559400D89E8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA548E260E559400D89E8A /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		8D3A53252614FA7D0014ABF8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8D3A53282614FE010014ABF8 /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
 		8DBA5487260E559400D89E8A /* medizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = medizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBA548A260E559400D89E8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DBA548C260E559400D89E8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				8DBA548A260E559400D89E8A /* AppDelegate.swift */,
+				8D3A53282614FE010014ABF8 /* Medication.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D3A53292614FE010014ABF8 /* Medication.swift in Sources */,
 				8DBA548F260E559400D89E8A /* ViewController.swift in Sources */,
 				8DBA548B260E559400D89E8A /* AppDelegate.swift in Sources */,
 				8DBA548D260E559400D89E8A /* SceneDelegate.swift in Sources */,
