@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62667DBF2615DDA100BA2F96 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62667DBE2615DDA100BA2F96 /* AddUserViewController.swift */; };
+		62667DC32615DF8900BA2F96 /* userDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = 62667DC22615DF8900BA2F96 /* userDatabase.db */; };
+		62667DC92615E27E00BA2F96 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62667DC82615E27E00BA2F96 /* User.swift */; };
 		8D3A53262614FA7D0014ABF8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3A53252614FA7D0014ABF8 /* HomeViewController.swift */; };
 		8D3A53292614FE010014ABF8 /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3A53282614FE010014ABF8 /* Medication.swift */; };
 		8DBA548B260E559400D89E8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA548A260E559400D89E8A /* AppDelegate.swift */; };
@@ -18,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62667DBE2615DDA100BA2F96 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		62667DC22615DF8900BA2F96 /* userDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = userDatabase.db; path = medizen/userDatabase.db; sourceTree = SOURCE_ROOT; };
+		62667DC62615E20600BA2F96 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		62667DC72615E20F00BA2F96 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		62667DC82615E27E00BA2F96 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8D3A53252614FA7D0014ABF8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8D3A53282614FE010014ABF8 /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
 		8DBA5487260E559400D89E8A /* medizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = medizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,11 +49,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62667DC12615DF7800BA2F96 /* Databases */ = {
+			isa = PBXGroup;
+			children = (
+				62667DC22615DF8900BA2F96 /* userDatabase.db */,
+			);
+			path = Databases;
+			sourceTree = "<group>";
+		};
+		62667DC52615E20600BA2F96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62667DC72615E20F00BA2F96 /* libsqlite3.0.tbd */,
+				62667DC62615E20600BA2F96 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8D3A53202614F7B60014ABF8 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				8DBA548E260E559400D89E8A /* ViewController.swift */,
 				8D3A53252614FA7D0014ABF8 /* HomeViewController.swift */,
+				62667DBE2615DDA100BA2F96 /* AddUserViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -63,6 +89,7 @@
 			children = (
 				8DBA548A260E559400D89E8A /* AppDelegate.swift */,
 				8D3A53282614FE010014ABF8 /* Medication.swift */,
+				62667DC82615E27E00BA2F96 /* User.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -81,6 +108,7 @@
 			children = (
 				8DBA5489260E559400D89E8A /* medizen */,
 				8DBA5488260E559400D89E8A /* Products */,
+				62667DC52615E20600BA2F96 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +123,7 @@
 		8DBA5489260E559400D89E8A /* medizen */ = {
 			isa = PBXGroup;
 			children = (
+				62667DC12615DF7800BA2F96 /* Databases */,
 				8D3A53232614F7F20014ABF8 /* Storyboards */,
 				8D3A53222614F7E40014ABF8 /* Classes */,
 				8D3A53212614F7D30014ABF8 /* Assets */,
@@ -165,6 +194,7 @@
 				8DBA5497260E559500D89E8A /* LaunchScreen.storyboard in Resources */,
 				8DBA5494260E559500D89E8A /* Assets.xcassets in Resources */,
 				8DBA5492260E559400D89E8A /* Main.storyboard in Resources */,
+				62667DC32615DF8900BA2F96 /* userDatabase.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,10 +206,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D3A53292614FE010014ABF8 /* Medication.swift in Sources */,
+				62667DBF2615DDA100BA2F96 /* AddUserViewController.swift in Sources */,
 				8DBA548F260E559400D89E8A /* ViewController.swift in Sources */,
 				8DBA548B260E559400D89E8A /* AppDelegate.swift in Sources */,
 				8DBA548D260E559400D89E8A /* SceneDelegate.swift in Sources */,
 				8D3A53262614FA7D0014ABF8 /* HomeViewController.swift in Sources */,
+				62667DC92615E27E00BA2F96 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +274,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -256,7 +289,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -311,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
