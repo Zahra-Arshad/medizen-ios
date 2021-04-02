@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A59F8822616A1E4007CCF41 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59F8812616A1E4007CCF41 /* ProfileViewController.swift */; };
+		4A59F8882616A513007CCF41 /* userDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = 4A59F8872616A513007CCF41 /* userDatabase.db */; };
+		4A59F88B2616A52A007CCF41 /* medicineDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = 4A59F88A2616A52A007CCF41 /* medicineDatabase.db */; };
+		4A59F88E2616A9A4007CCF41 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59F88D2616A9A4007CCF41 /* EditProfileViewController.swift */; };
+		4A59F8922616CF73007CCF41 /* Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59F8912616CF73007CCF41 /* Streak.swift */; };
 		62667DBF2615DDA100BA2F96 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62667DBE2615DDA100BA2F96 /* AddUserViewController.swift */; };
 		62667DC92615E27E00BA2F96 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62667DC82615E27E00BA2F96 /* User.swift */; };
 		6289F31E2616122B005407C3 /* AddMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6289F31D2616122B005407C3 /* AddMedicineViewController.swift */; };
-		6289F32126161530005407C3 /* userDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = 6289F32026161530005407C3 /* userDatabase.db */; };
-		6289F325261623C8005407C3 /* medicineDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = 6289F324261623C8005407C3 /* medicineDatabase.db */; };
 		8D3A53262614FA7D0014ABF8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3A53252614FA7D0014ABF8 /* HomeViewController.swift */; };
 		8D3A53292614FE010014ABF8 /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3A53282614FE010014ABF8 /* Medication.swift */; };
 		8DBA548B260E559400D89E8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA548A260E559400D89E8A /* AppDelegate.swift */; };
@@ -23,13 +26,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A59F8812616A1E4007CCF41 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4A59F8872616A513007CCF41 /* userDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = userDatabase.db; sourceTree = "<group>"; };
+		4A59F88A2616A52A007CCF41 /* medicineDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = medicineDatabase.db; sourceTree = "<group>"; };
+		4A59F88D2616A9A4007CCF41 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		4A59F8912616CF73007CCF41 /* Streak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streak.swift; sourceTree = "<group>"; };
 		62667DBE2615DDA100BA2F96 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		62667DC62615E20600BA2F96 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		62667DC72615E20F00BA2F96 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		62667DC82615E27E00BA2F96 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6289F31D2616122B005407C3 /* AddMedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicineViewController.swift; sourceTree = "<group>"; };
-		6289F32026161530005407C3 /* userDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = userDatabase.db; sourceTree = "<group>"; };
-		6289F324261623C8005407C3 /* medicineDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = medicineDatabase.db; sourceTree = "<group>"; };
 		8D3A53252614FA7D0014ABF8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8D3A53282614FE010014ABF8 /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
 		8DBA5487260E559400D89E8A /* medizen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = medizen.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,8 +62,8 @@
 		62667DC12615DF7800BA2F96 /* Databases */ = {
 			isa = PBXGroup;
 			children = (
-				6289F324261623C8005407C3 /* medicineDatabase.db */,
-				6289F32026161530005407C3 /* userDatabase.db */,
+				4A59F88A2616A52A007CCF41 /* medicineDatabase.db */,
+				4A59F8872616A513007CCF41 /* userDatabase.db */,
 			);
 			path = Databases;
 			sourceTree = "<group>";
@@ -78,6 +84,8 @@
 				8D3A53252614FA7D0014ABF8 /* HomeViewController.swift */,
 				62667DBE2615DDA100BA2F96 /* AddUserViewController.swift */,
 				6289F31D2616122B005407C3 /* AddMedicineViewController.swift */,
+				4A59F8812616A1E4007CCF41 /* ProfileViewController.swift */,
+				4A59F88D2616A9A4007CCF41 /* EditProfileViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -96,6 +104,7 @@
 				8DBA548A260E559400D89E8A /* AppDelegate.swift */,
 				8D3A53282614FE010014ABF8 /* Medication.swift */,
 				62667DC82615E27E00BA2F96 /* User.swift */,
+				4A59F8912616CF73007CCF41 /* Streak.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -200,8 +209,8 @@
 				8DBA5497260E559500D89E8A /* LaunchScreen.storyboard in Resources */,
 				8DBA5494260E559500D89E8A /* Assets.xcassets in Resources */,
 				8DBA5492260E559400D89E8A /* Main.storyboard in Resources */,
-				6289F32126161530005407C3 /* userDatabase.db in Resources */,
-				6289F325261623C8005407C3 /* medicineDatabase.db in Resources */,
+				4A59F8882616A513007CCF41 /* userDatabase.db in Resources */,
+				4A59F88B2616A52A007CCF41 /* medicineDatabase.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,12 +221,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A59F88E2616A9A4007CCF41 /* EditProfileViewController.swift in Sources */,
 				6289F31E2616122B005407C3 /* AddMedicineViewController.swift in Sources */,
 				8D3A53292614FE010014ABF8 /* Medication.swift in Sources */,
 				62667DBF2615DDA100BA2F96 /* AddUserViewController.swift in Sources */,
 				8DBA548F260E559400D89E8A /* ViewController.swift in Sources */,
 				8DBA548B260E559400D89E8A /* AppDelegate.swift in Sources */,
+				4A59F8922616CF73007CCF41 /* Streak.swift in Sources */,
 				8DBA548D260E559400D89E8A /* SceneDelegate.swift in Sources */,
+				4A59F8822616A1E4007CCF41 /* ProfileViewController.swift in Sources */,
 				8D3A53262614FA7D0014ABF8 /* HomeViewController.swift in Sources */,
 				62667DC92615E27E00BA2F96 /* User.swift in Sources */,
 			);
