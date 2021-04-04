@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		62667DBF2615DDA100BA2F96 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62667DBE2615DDA100BA2F96 /* AddUserViewController.swift */; };
 		62667DC92615E27E00BA2F96 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62667DC82615E27E00BA2F96 /* User.swift */; };
+		62708277261A133800DAE348 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62708276261A133800DAE348 /* LoginViewController.swift */; };
 		6289F31E2616122B005407C3 /* AddMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6289F31D2616122B005407C3 /* AddMedicineViewController.swift */; };
 		6289F32126161530005407C3 /* userDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = 6289F32026161530005407C3 /* userDatabase.db */; };
 		6289F325261623C8005407C3 /* medicineDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = 6289F324261623C8005407C3 /* medicineDatabase.db */; };
@@ -27,6 +28,7 @@
 		62667DC62615E20600BA2F96 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		62667DC72615E20F00BA2F96 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		62667DC82615E27E00BA2F96 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		62708276261A133800DAE348 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6289F31D2616122B005407C3 /* AddMedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicineViewController.swift; sourceTree = "<group>"; };
 		6289F32026161530005407C3 /* userDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = userDatabase.db; sourceTree = "<group>"; };
 		6289F324261623C8005407C3 /* medicineDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = medicineDatabase.db; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				8D3A53252614FA7D0014ABF8 /* HomeViewController.swift */,
 				62667DBE2615DDA100BA2F96 /* AddUserViewController.swift */,
 				6289F31D2616122B005407C3 /* AddMedicineViewController.swift */,
+				62708276261A133800DAE348 /* LoginViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62708277261A133800DAE348 /* LoginViewController.swift in Sources */,
 				6289F31E2616122B005407C3 /* AddMedicineViewController.swift in Sources */,
 				8D3A53292614FE010014ABF8 /* Medication.swift in Sources */,
 				62667DBF2615DDA100BA2F96 /* AddUserViewController.swift in Sources */,
