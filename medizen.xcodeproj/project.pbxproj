@@ -15,6 +15,10 @@
 		8DBA5492260E559400D89E8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DBA5490260E559400D89E8A /* Main.storyboard */; };
 		8DBA5494260E559500D89E8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DBA5493260E559500D89E8A /* Assets.xcassets */; };
 		8DBA5497260E559500D89E8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DBA5495260E559500D89E8A /* LaunchScreen.storyboard */; };
+		B77BB3452616A8E3007CF26D /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BB3442616A8E3007CF26D /* ContactsViewController.swift */; };
+		B77BB3482616A949007CF26D /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BB3472616A949007CF26D /* Contact.swift */; };
+		B77BB34B2616AA54007CF26D /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BB34A2616AA54007CF26D /* ContactCell.swift */; };
+		B77BB34F2616AC9A007CF26D /* EditContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BB34E2616AC9A007CF26D /* EditContactTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		8DBA5493260E559500D89E8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DBA5496260E559500D89E8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DBA5498260E559500D89E8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B77BB3442616A8E3007CF26D /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		B77BB3472616A949007CF26D /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		B77BB34A2616AA54007CF26D /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		B77BB34E2616AC9A007CF26D /* EditContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +54,8 @@
 			children = (
 				8DBA548E260E559400D89E8A /* ViewController.swift */,
 				8D3A53252614FA7D0014ABF8 /* HomeViewController.swift */,
+				B77BB3442616A8E3007CF26D /* ContactsViewController.swift */,
+				B77BB34E2616AC9A007CF26D /* EditContactTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -63,6 +73,8 @@
 			children = (
 				8DBA548A260E559400D89E8A /* AppDelegate.swift */,
 				8D3A53282614FE010014ABF8 /* Medication.swift */,
+				B77BB3472616A949007CF26D /* Contact.swift */,
+				B77BB34A2616AA54007CF26D /* ContactCell.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -175,11 +187,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B77BB34B2616AA54007CF26D /* ContactCell.swift in Sources */,
 				8D3A53292614FE010014ABF8 /* Medication.swift in Sources */,
 				8DBA548F260E559400D89E8A /* ViewController.swift in Sources */,
 				8DBA548B260E559400D89E8A /* AppDelegate.swift in Sources */,
 				8DBA548D260E559400D89E8A /* SceneDelegate.swift in Sources */,
+				B77BB34F2616AC9A007CF26D /* EditContactTableViewController.swift in Sources */,
+				B77BB3452616A8E3007CF26D /* ContactsViewController.swift in Sources */,
 				8D3A53262614FA7D0014ABF8 /* HomeViewController.swift in Sources */,
+				B77BB3482616A949007CF26D /* Contact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -311,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
