@@ -15,6 +15,8 @@ class AddMedicineViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var textFrequency: UITextField!
     @IBOutlet weak var textQuantity: UITextField!
     @IBOutlet weak var textDescription: UITextField!
+    
+    /*
     var selectedDose = ""
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +34,7 @@ class AddMedicineViewController: UIViewController,UITextFieldDelegate {
         let myIntQuant = Int(textQuantity.text!)!
         med.initWithData(theRow: 0, theMedName: textName.text!, theFrequency: textFrequency.text!, theDosage: myIntDose, theDoseMeasure: selectedDose, theQuantity: myIntQuant, theDescrip: textDescription.text!)
         let mainDelegate = UIApplication.shared.delegate as! AppDelegate
-        _ = mainDelegate.insertIntoMedicationDataBase(med: med)
+      //  _ = mainDelegate.insertIntoMedicationDataBase(med: med)
     }
     
     func updateDosage(){
@@ -55,6 +57,6 @@ class AddMedicineViewController: UIViewController,UITextFieldDelegate {
             
         }
     }
-    
+    */
 }
 

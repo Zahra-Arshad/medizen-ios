@@ -17,7 +17,6 @@ import UIKit
 
 class Streak: NSObject {
 
-    class Streak: NSObject {
         var id: Int?
         var days: Int?
         var imageUrl: String?
@@ -27,5 +26,5 @@ class Streak: NSObject {
             days = d
             imageUrl = url
         }
-}
+
 }

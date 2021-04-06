@@ -158,6 +158,11 @@
                                 <color key="tintColor" red="0.69411764710000001" green="0.84313725490000002" blue="0.47843137250000001" alpha="0.50497909330000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MeC-50-mPb" customClass="AnimationView">
+                                <rect key="frame" x="20" y="291" width="387" height="226"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MEDICATION STREAK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8g-JY-d1h">
                                 <rect key="frame" x="136" y="516" width="142" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -217,8 +222,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6C-Sx-qeP">
-                                <rect key="frame" x="73" y="326" width="112" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 Days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6C-Sx-qeP">
+                                <rect key="frame" x="61" y="326" width="133" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <color key="textColor" red="0.68926906590000003" green="0.83180755380000004" blue="0.47706621890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -233,19 +238,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badge_10" translatesAutoresizingMaskIntoConstraints="NO" id="Dd2-Aj-adO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dd2-Aj-adO">
                                 <rect key="frame" x="223" y="326" width="154" height="154"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badge_1" translatesAutoresizingMaskIntoConstraints="NO" id="y57-ch-Yu5">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badge_1" translatesAutoresizingMaskIntoConstraints="NO" id="y57-ch-Yu5">
                                 <rect key="frame" x="20" y="553" width="86" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badge_3" translatesAutoresizingMaskIntoConstraints="NO" id="EBJ-zB-Os2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badge_3" translatesAutoresizingMaskIntoConstraints="NO" id="EBJ-zB-Os2">
                                 <rect key="frame" x="120" y="553" width="84" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badge_10" translatesAutoresizingMaskIntoConstraints="NO" id="NzO-SX-5M9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badge_10" translatesAutoresizingMaskIntoConstraints="NO" id="NzO-SX-5M9">
                                 <rect key="frame" x="212" y="553" width="84" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -281,8 +286,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
+                        <outlet property="animationView" destination="MeC-50-mPb" id="hq6-kX-Je5"/>
                         <outlet property="currentStreak" destination="e6C-Sx-qeP" id="K8j-So-6hg"/>
                         <outlet property="currentStreakBadge" destination="Dd2-Aj-adO" id="DTI-uR-kkW"/>
+                        <outlet property="fifteenDayStreakBadge" destination="ayn-oS-11F" id="EeE-XI-Fxt"/>
+                        <outlet property="hundredEightyDayStreakBadge" destination="WH8-FB-T5F" id="z1T-AU-lgs"/>
+                        <outlet property="ninetyDayStreakBadge" destination="DyO-uB-JP1" id="5z6-Xa-ogV"/>
+                        <outlet property="oneDayStreakBadge" destination="y57-ch-Yu5" id="oA3-Su-Ke6"/>
+                        <outlet property="tenDayStreakBadge" destination="NzO-SX-5M9" id="wiR-kE-qqc"/>
+                        <outlet property="thirtyDayStreakBadge" destination="uHh-uU-QCF" id="FHi-2x-fOZ"/>
+                        <outlet property="threeDayStreakBadge" destination="EBJ-zB-Os2" id="JkX-9K-XGT"/>
+                        <outlet property="threeSixFiveDayStreakBadge" destination="XNI-NU-xRG" id="TTh-Tr-ipL"/>
                         <outlet property="userAge" destination="CDr-Le-gtO" id="iek-g0-jlf"/>
                         <outlet property="userEmail" destination="YpI-fk-PrD" id="cEe-ex-Xed"/>
                         <outlet property="userName" destination="Qh9-EG-dmA" id="y2o-jB-ihY"/>
@@ -313,7 +327,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="MpT-s9-PeO" id="5t6-zg-1JL"/>
+                                    <outlet property="delegate" destination="M0Y-2g-hfe" id="89T-Hw-KVM"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Te8-g2-a8t">
@@ -334,9 +348,9 @@
                                 <rect key="frame" x="51" y="368" width="312" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
-                                    <outlet property="delegate" destination="MpT-s9-PeO" id="vVa-yl-hRd"/>
+                                    <outlet property="delegate" destination="M0Y-2g-hfe" id="A2h-7f-fNQ"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nz-ZT-Gms">
@@ -350,9 +364,9 @@
                                 <rect key="frame" x="51" y="469" width="312" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 <connections>
-                                    <outlet property="delegate" destination="MpT-s9-PeO" id="Bq2-So-DRr"/>
+                                    <outlet property="delegate" destination="M0Y-2g-hfe" id="cAU-iY-BMk"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQc-2v-6Le">
@@ -366,9 +380,9 @@
                                 <rect key="frame" x="51" y="578" width="312" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 <connections>
-                                    <outlet property="delegate" destination="MpT-s9-PeO" id="eP1-Fs-O3O"/>
+                                    <outlet property="delegate" destination="M0Y-2g-hfe" id="0mZ-Db-QhM"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e4n-ND-7K2">
@@ -377,7 +391,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="MpT-s9-PeO" id="9sh-0B-nKh"/>
+                                    <outlet property="delegate" destination="M0Y-2g-hfe" id="8Iv-GR-5jw"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UX9-9G-D7s">
@@ -395,16 +409,42 @@
                                 <color key="tintColor" red="1" green="0.99997437" blue="0.86643835619999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="SAVE PROFILE"/>
                                 <connections>
-                                    <segue destination="M92-9f-lac" kind="unwind" unwindAction="returnToProfileViewControllerWithSender:" id="psv-o2-dKR"/>
+                                    <action selector="updateProfileWithSender:" destination="M0Y-2g-hfe" eventType="touchUpInside" id="aMQ-o7-fnA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ups-jt-8un">
+                                <rect key="frame" x="322" y="579.5" width="41" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.68926906590000003" green="0.83180755380000004" blue="0.47706621890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" backgroundImage="eye" catalog="system"/>
+                                <connections>
+                                    <action selector="toggleConfimPasswordVisibilityWithSender:" destination="M0Y-2g-hfe" eventType="touchUpInside" id="FRr-B5-jly"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUt-Kt-IT6">
+                                <rect key="frame" x="322" y="469.5" width="41" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.68926906590000003" green="0.83180755380000004" blue="0.47706621890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" backgroundImage="eye" catalog="system"/>
+                                <connections>
+                                    <action selector="togglePasswordVisibilityWithSender:" destination="M0Y-2g-hfe" eventType="touchUpInside" id="4VU-5D-lBk"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="liB-3T-Zml"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="userAge" destination="BJU-7Y-nfV" id="sIO-jo-xhZ"/>
+                        <outlet property="userEmail" destination="e4n-ND-7K2" id="3YV-7P-kLm"/>
+                        <outlet property="userName" destination="Iy0-q6-Rjy" id="brE-e0-2MS"/>
+                        <outlet property="userPassword" destination="53n-wA-tYL" id="uLE-4l-onY"/>
+                        <outlet property="userPasswordConfirm" destination="YDb-k8-kg1" id="EyY-gm-7Ve"/>
+                        <segue destination="JnV-WK-Mce" kind="unwind" identifier="UpdateProfileSegue" unwindAction="returnToProfileViewControllerWithSender:" id="EFm-1v-TUg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pgy-lK-nqu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="M92-9f-lac" userLabel="Exit" sceneMemberID="exit"/>
+                <exit id="JnV-WK-Mce" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="882.60869565217399" y="1524.7767857142856"/>
         </scene>
@@ -732,6 +772,7 @@
         <image name="badge_365" width="209" height="256"/>
         <image name="badge_90" width="209" height="256"/>
         <image name="calendar.badge.clock" catalog="system" width="128" height="108"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
         <image name="medizen" width="2100" height="1500"/>

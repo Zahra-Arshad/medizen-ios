@@ -3,15 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4A59F8822616A1E4007CCF41 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59F8812616A1E4007CCF41 /* ProfileViewController.swift */; };
-		4A59F8882616A513007CCF41 /* userDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = 4A59F8872616A513007CCF41 /* userDatabase.db */; };
-		4A59F88B2616A52A007CCF41 /* medicineDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = 4A59F88A2616A52A007CCF41 /* medicineDatabase.db */; };
 		4A59F88E2616A9A4007CCF41 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59F88D2616A9A4007CCF41 /* EditProfileViewController.swift */; };
 		4A59F8922616CF73007CCF41 /* Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59F8912616CF73007CCF41 /* Streak.swift */; };
+		4A59F89826197678007CCF41 /* User2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59F89726197678007CCF41 /* User2.swift */; };
+		4A8EB92C261C1B83005B3CE3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4A8EB92B261C1B83005B3CE3 /* Lottie */; };
+		4A8EB934261C1FDB005B3CE3 /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A8EB933261C1FDB005B3CE3 /* confetti.json */; };
+		4A8EB93C261C3EA8005B3CE3 /* Medizen.db in Resources */ = {isa = PBXBuildFile; fileRef = 4A8EB93B261C3EA8005B3CE3 /* Medizen.db */; };
+		4A8EB949261C6086005B3CE3 /* sad.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A8EB948261C6086005B3CE3 /* sad.json */; };
 		62667DBF2615DDA100BA2F96 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62667DBE2615DDA100BA2F96 /* AddUserViewController.swift */; };
 		62667DC92615E27E00BA2F96 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62667DC82615E27E00BA2F96 /* User.swift */; };
 		6289F31E2616122B005407C3 /* AddMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6289F31D2616122B005407C3 /* AddMedicineViewController.swift */; };
@@ -27,10 +30,12 @@
 
 /* Begin PBXFileReference section */
 		4A59F8812616A1E4007CCF41 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		4A59F8872616A513007CCF41 /* userDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = userDatabase.db; sourceTree = "<group>"; };
-		4A59F88A2616A52A007CCF41 /* medicineDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = medicineDatabase.db; sourceTree = "<group>"; };
 		4A59F88D2616A9A4007CCF41 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		4A59F8912616CF73007CCF41 /* Streak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streak.swift; sourceTree = "<group>"; };
+		4A59F89726197678007CCF41 /* User2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User2.swift; sourceTree = "<group>"; };
+		4A8EB933261C1FDB005B3CE3 /* confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = confetti.json; sourceTree = "<group>"; };
+		4A8EB93B261C3EA8005B3CE3 /* Medizen.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = Medizen.db; path = ../../../../../../Users/czerwik/Medizen.db; sourceTree = "<group>"; };
+		4A8EB948261C6086005B3CE3 /* sad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sad.json; sourceTree = "<group>"; };
 		62667DBE2615DDA100BA2F96 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		62667DC62615E20600BA2F96 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		62667DC72615E20F00BA2F96 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -53,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A8EB92C261C1B83005B3CE3 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,8 +68,7 @@
 		62667DC12615DF7800BA2F96 /* Databases */ = {
 			isa = PBXGroup;
 			children = (
-				4A59F88A2616A52A007CCF41 /* medicineDatabase.db */,
-				4A59F8872616A513007CCF41 /* userDatabase.db */,
+				4A8EB93B261C3EA8005B3CE3 /* Medizen.db */,
 			);
 			path = Databases;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 				8D3A53282614FE010014ABF8 /* Medication.swift */,
 				62667DC82615E27E00BA2F96 /* User.swift */,
 				4A59F8912616CF73007CCF41 /* Streak.swift */,
+				4A59F89726197678007CCF41 /* User2.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -138,6 +144,8 @@
 		8DBA5489260E559400D89E8A /* medizen */ = {
 			isa = PBXGroup;
 			children = (
+				4A8EB933261C1FDB005B3CE3 /* confetti.json */,
+				4A8EB948261C6086005B3CE3 /* sad.json */,
 				62667DC12615DF7800BA2F96 /* Databases */,
 				8D3A53232614F7F20014ABF8 /* Storyboards */,
 				8D3A53222614F7E40014ABF8 /* Classes */,
@@ -165,6 +173,9 @@
 			dependencies = (
 			);
 			name = medizen;
+			packageProductDependencies = (
+				4A8EB92B261C1B83005B3CE3 /* Lottie */,
+			);
 			productName = medizen;
 			productReference = 8DBA5487260E559400D89E8A /* medizen.app */;
 			productType = "com.apple.product-type.application";
@@ -192,6 +203,9 @@
 				Base,
 			);
 			mainGroup = 8DBA547E260E559400D89E8A;
+			packageReferences = (
+				4A8EB92A261C1B83005B3CE3 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 8DBA5488260E559400D89E8A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -208,9 +222,10 @@
 			files = (
 				8DBA5497260E559500D89E8A /* LaunchScreen.storyboard in Resources */,
 				8DBA5494260E559500D89E8A /* Assets.xcassets in Resources */,
+				4A8EB949261C6086005B3CE3 /* sad.json in Resources */,
 				8DBA5492260E559400D89E8A /* Main.storyboard in Resources */,
-				4A59F8882616A513007CCF41 /* userDatabase.db in Resources */,
-				4A59F88B2616A52A007CCF41 /* medicineDatabase.db in Resources */,
+				4A8EB934261C1FDB005B3CE3 /* confetti.json in Resources */,
+				4A8EB93C261C3EA8005B3CE3 /* Medizen.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +239,7 @@
 				4A59F88E2616A9A4007CCF41 /* EditProfileViewController.swift in Sources */,
 				6289F31E2616122B005407C3 /* AddMedicineViewController.swift in Sources */,
 				8D3A53292614FE010014ABF8 /* Medication.swift in Sources */,
+				4A59F89826197678007CCF41 /* User2.swift in Sources */,
 				62667DBF2615DDA100BA2F96 /* AddUserViewController.swift in Sources */,
 				8DBA548F260E559400D89E8A /* ViewController.swift in Sources */,
 				8DBA548B260E559400D89E8A /* AppDelegate.swift in Sources */,
@@ -291,6 +307,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -353,6 +370,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -432,6 +450,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4A8EB92A261C1B83005B3CE3 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4A8EB92B261C1B83005B3CE3 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A8EB92A261C1B83005B3CE3 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8DBA547F260E559400D89E8A /* Project object */;
 }

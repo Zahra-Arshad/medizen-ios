@@ -3,14 +3,205 @@
 //  medizen
 //
 //  Created by Zahra Arshad on 2021-03-26.
-//
+//  Modified by Martha Czerwik on April 06 2021
+
 
 import UIKit
 import SQLite3
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var databaseName : String? = "Medizen.db"
+    var databasePath : String?
+    
+    //var users : [User] = []
 
+    var user : User = User.init()
+    var userStreak : Streak = Streak.init()
+    
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        
+        let documentPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        
+        let documentDir = documentPaths[0]
+        databasePath = documentDir.appending("/" + databaseName!)
+        print("Database path: \(databasePath)")
+        
+        checkAndCreateDatabase()
+        
+        return true
+    }
+    
+    func checkAndCreateDatabase(){
+        var success = false
+        
+        let fileManager = FileManager.default
+        success = fileManager.fileExists(atPath: databasePath!)
+        
+        if success {
+            return
+        }
+
+        let databasePathFromApp = Bundle.main.resourcePath?.appending("/" + databaseName!)
+
+        try? fileManager.copyItem(atPath: databasePathFromApp!, toPath: databasePath!)
+        
+        return
+    }
+    
+    //THISMETHOD TO BE CALLED IN LOGIN CONTROLLER - PASS IN VALUES FOR EMAIL AND PASSWORD
+    func readUserData(){
+    //UNCOMMENT THIS WHEN LOGIN CONTROLLER DONE - REPLACE METHOD SIGNATURE
+    //func readDataFromDatabase(email : String, password : String){
+        var db : OpaquePointer? = nil
+        
+        if sqlite3_open(self.databasePath, &db) == SQLITE_OK {
+            
+            print("Successfully opened connection to database at \(self.databasePath)")
+            
+            var queryStatement : OpaquePointer? = nil
+            
+            let queryStatementString : String = "select * from users where email = 'js@mail.com' and password = 'password1234'"
+            
+            //UNCOMMENT THIS WHEN LOGIN CONTROLLER DONE AND REMOVE ABOVE QUERYSTATEMENT ^
+            //let queryStatementString : String = "select * from users where email = '\(email)' and password = '\(password)'"
+
+            if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+                while sqlite3_step(queryStatement) == SQLITE_ROW {
+                    let id: Int = Int(sqlite3_column_int(queryStatement, 0))
+                    let cname = sqlite3_column_text(queryStatement, 1)
+                    let cemail = sqlite3_column_text(queryStatement, 2)
+                    let age = Int(sqlite3_column_int(queryStatement, 3))
+                    let cpassword = sqlite3_column_text(queryStatement, 4)
+                    let streakid = Int(sqlite3_column_int(queryStatement, 5))
+                    
+                    let name = String(cString: cname!)
+                    let email = String(cString: cemail!)
+                    let password = String(cString: cpassword!)
+                    
+                    user.initWithData(theRow: id,
+                                        theName: name,
+                                        theEmail: email,
+                                        theAge: age,
+                                        thePassword: password,
+                                        theStreakId: streakid)
+                    
+                    print("Query result")
+                    print("\(id) | \(name) | \(email) | \(age) | \(password) | \(streakid)")
+                                        
+                }
+                
+                sqlite3_finalize(queryStatement)
+                
+            } else {
+                print("Select statement could not be prepared")
+            }
+            
+            sqlite3_close(db)
+            
+        } else {
+            print("Unable to open database")
+        }
+    }// end of readUserData
+    
+    /**
+        Created by: Martha Czerwik
+        Description:
+     */
+    func getStreakData(streakId : Int){
+        var db : OpaquePointer? = nil
+
+        if sqlite3_open(self.databasePath, &db) == SQLITE_OK {
+            
+            print("Successfully opened connection to database at \(self.databasePath)")
+            
+            var queryStatement : OpaquePointer? = nil
+            
+            let queryStatementString : String = "select * from streaks where id = \(streakId)"
+
+            if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+                while sqlite3_step(queryStatement) == SQLITE_ROW {
+                    let id: Int = Int(sqlite3_column_int(queryStatement, 0))
+                    let days: Int = Int (sqlite3_column_int(queryStatement, 1))
+                    let cimageUrl = sqlite3_column_text(queryStatement, 2)
+                    
+                    let imageUrl = String(cString: cimageUrl!)
+                   
+                    userStreak.initWithData(streakId: id,
+                                            streakDays: days,
+                                            streakImageUrl: imageUrl)
+                    
+                    print("Query result")
+                    print("\(id) | \(days) | \(imageUrl)")
+                                        
+                }
+                
+                sqlite3_finalize(queryStatement)
+                
+            } else {
+                print("Select statement could not be prepared")
+            }
+            
+            sqlite3_close(db)
+            
+        } else {
+            print("Unable to open database")
+        }
+    } // end of getStreakData
+    
+    /**
+        Created by: Martha Czerwik
+        Description:
+     */
+    func updateUser(userId : Int, userName : String, userEmail : String, userAge : Int) -> Bool {
+        var db: OpaquePointer? = nil
+        var returnCode : Bool = true
+        
+        if sqlite3_open(self.databasePath, &db) == SQLITE_OK {
+            
+            print("method params = name: \(userName), email: \(userEmail), age: \(userAge)")
+            
+            var updateStatement : OpaquePointer? = nil
+            let updateStatementString : String = "update users set name = '\(userName)', email = '\(userEmail)', age = \(userAge) where id = \(userId)"
+            if sqlite3_prepare_v2(db, updateStatementString, -1, &updateStatement, nil) == SQLITE_OK {
+                
+                user.name = userName
+                user.email = userEmail
+                user.age = userAge
+                
+                if sqlite3_step(updateStatement) == SQLITE_DONE {
+                    print("Successfully updated user \(userId)")
+                    print("Query result")
+                    print("\(userName) | \(userEmail) | \(userAge)")
+                } else {
+                    print("Could not update user")
+                    returnCode = false
+                }
+                sqlite3_finalize(updateStatement)
+            } else {
+                print("update statement could not be prepared")
+                returnCode = false
+            }
+            
+            sqlite3_close(db)
+            
+        } else {
+            print("Unable to open db")
+            returnCode = false
+        }
+        
+        return returnCode
+    }
+    
+    
+    
+    
+    
+    
+/*
     var userdatabaseName : String? = "userDatabase.db"
     var userdatabasePath : String?
     
@@ -256,7 +447,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return returnCode
     }
-
+*/
 
     // MARK: UISceneSession Lifecycle
 

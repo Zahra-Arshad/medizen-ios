@@ -12,6 +12,8 @@ class AddUserViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var textEmail: UITextField!
     @IBOutlet weak var textAge: UITextField!
     @IBOutlet weak var textPassword: UITextField!
+    
+    /*
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,12 +24,13 @@ class AddUserViewController: UIViewController,UITextFieldDelegate {
         let myInt2 = Int(textAge.text!)!
         user.initWithData(theRow: 0,theName: textName.text!,theEmail: textEmail.text!,theAge: myInt2 ,thePassword: textPassword.text!)
         let mainDelegate = UIApplication.shared.delegate as! AppDelegate
-        _ = mainDelegate.insertIntoUserDataBase(user: user)
+       // _ = mainDelegate.insertIntoUserDataBase(user: user)
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return textField.resignFirstResponder()
     }
     
-    
+  */
 }
+
 

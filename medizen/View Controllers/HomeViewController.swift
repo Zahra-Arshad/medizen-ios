@@ -9,10 +9,15 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //REMOVE THIS ONCE LOGIN CONTROLLER DONE - TEMPORARY
+        mainDelegate.readUserData()
     }
     
 
