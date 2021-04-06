@@ -10,7 +10,6 @@
 		4A59F8822616A1E4007CCF41 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59F8812616A1E4007CCF41 /* ProfileViewController.swift */; };
 		4A59F88E2616A9A4007CCF41 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59F88D2616A9A4007CCF41 /* EditProfileViewController.swift */; };
 		4A59F8922616CF73007CCF41 /* Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59F8912616CF73007CCF41 /* Streak.swift */; };
-		4A59F89826197678007CCF41 /* User2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A59F89726197678007CCF41 /* User2.swift */; };
 		4A8EB92C261C1B83005B3CE3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4A8EB92B261C1B83005B3CE3 /* Lottie */; };
 		4A8EB934261C1FDB005B3CE3 /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A8EB933261C1FDB005B3CE3 /* confetti.json */; };
 		4A8EB93C261C3EA8005B3CE3 /* Medizen.db in Resources */ = {isa = PBXBuildFile; fileRef = 4A8EB93B261C3EA8005B3CE3 /* Medizen.db */; };
@@ -32,7 +31,6 @@
 		4A59F8812616A1E4007CCF41 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4A59F88D2616A9A4007CCF41 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		4A59F8912616CF73007CCF41 /* Streak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streak.swift; sourceTree = "<group>"; };
-		4A59F89726197678007CCF41 /* User2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User2.swift; sourceTree = "<group>"; };
 		4A8EB933261C1FDB005B3CE3 /* confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = confetti.json; sourceTree = "<group>"; };
 		4A8EB93B261C3EA8005B3CE3 /* Medizen.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = Medizen.db; path = ../../../../../../Users/czerwik/Medizen.db; sourceTree = "<group>"; };
 		4A8EB948261C6086005B3CE3 /* sad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sad.json; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 				8D3A53282614FE010014ABF8 /* Medication.swift */,
 				62667DC82615E27E00BA2F96 /* User.swift */,
 				4A59F8912616CF73007CCF41 /* Streak.swift */,
-				4A59F89726197678007CCF41 /* User2.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -239,7 +236,6 @@
 				4A59F88E2616A9A4007CCF41 /* EditProfileViewController.swift in Sources */,
 				6289F31E2616122B005407C3 /* AddMedicineViewController.swift in Sources */,
 				8D3A53292614FE010014ABF8 /* Medication.swift in Sources */,
-				4A59F89826197678007CCF41 /* User2.swift in Sources */,
 				62667DBF2615DDA100BA2F96 /* AddUserViewController.swift in Sources */,
 				8DBA548F260E559400D89E8A /* ViewController.swift in Sources */,
 				8DBA548B260E559400D89E8A /* AppDelegate.swift in Sources */,
