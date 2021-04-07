@@ -11,7 +11,6 @@
 /// that the user has achieve/has yet to achieve
 
 /// <#TODO#>
-/// Get array of streaks and find which ones should be "greyed" out (not acheived yet)
 /// Update View Profile fields after user updates their profile
 /// clean up code, add comments
 
@@ -41,26 +40,50 @@ class ProfileViewController: UIViewController {
     @IBAction func returnToProfileViewController (Sender: UIStoryboardSegue){
         
     }
+    let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+
+    var badges : [UIImageView : Int] = [:]
+
+ 
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        let mainDelegate = UIApplication.shared.delegate as! AppDelegate
-        mainDelegate.reloadInputViews()
         // Do any additional setup after loading the view.
-        mainDelegate.getStreakData(streakId: mainDelegate.user.streakid!)
+        
+        //update alpha value of images based on which badges user has achieved
+        badges[oneDayStreakBadge] = mainDelegate.streaks[0].days
+        badges[threeDayStreakBadge] = mainDelegate.streaks[1].days
+        badges[tenDayStreakBadge] = mainDelegate.streaks[2].days
+        badges[fifteenDayStreakBadge] = mainDelegate.streaks[3].days
+        badges[thirtyDayStreakBadge] = mainDelegate.streaks[4].days
+        badges[ninetyDayStreakBadge] = mainDelegate.streaks[5].days
+        badges[hundredEightyDayStreakBadge] = mainDelegate.streaks[6].days
+        badges[threeSixFiveDayStreakBadge] = mainDelegate.streaks[7].days
+                
+        for(key, value) in badges {
+            if value > mainDelegate.user.streak! {
+                key.alpha = 0.4
+            } else {
+                key.alpha = 1
+            }
+        }
+        
+        mainDelegate.getCurrentStreak(days: mainDelegate.user.streak!)
+        
         userName.text = mainDelegate.user.name!
         userEmail.text = mainDelegate.user.email!
         userAge.text = String(mainDelegate.user.age!)
         
-        if mainDelegate.userStreak.days == nil {
+        
+        if mainDelegate.usersCurrentStreak.days == nil {
             currentStreak.text = "0 Days"
             animateEmpty()
         } else {
-            currentStreak.text = "\(String(mainDelegate.userStreak.days!)) Days"
-            let image : UIImage = UIImage(named:mainDelegate.userStreak.imageUrl!)!
+            currentStreak.text = "\(String(mainDelegate.usersCurrentStreak.days!)) Days"
+            let badgeImage : UIImage = UIImage(named:mainDelegate.usersCurrentStreak.imageUrl!)!
             
-            currentStreakBadge = UIImageView(image: image)
+            currentStreakBadge = UIImageView(image: badgeImage)
             currentStreakBadge.frame = CGRect(x: 235, y: 315, width: 140, height: 175)
             view.addSubview(currentStreakBadge)
             animateConfetti()
@@ -90,7 +113,7 @@ class ProfileViewController: UIViewController {
         animationView.play()
         animationView.loopMode = .loop
     }
-
+    
     /*
     // MARK: - Navigation
 

@@ -15,8 +15,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        //REMOVE THIS ONCE LOGIN CONTROLLER DONE - TEMPORARY
         mainDelegate.readUserData()
     }
     

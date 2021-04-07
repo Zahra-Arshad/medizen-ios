@@ -18,11 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //var users : [User] = []
 
     var user : User = User.init()
-    var userStreak : Streak = Streak.init()
-    
-    //var userTasks : Task = Task.init()
-    var userTasks : [String] = ["Task 1", "Task 2", "Task 3"]
-    
+    var streaks : [Streak] = []
+    var usersCurrentStreak : Streak = Streak.init()
+        
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -33,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Database path: \(databasePath)")
         
         checkAndCreateDatabase()
+        getStreakData()
         
         return true
     }
@@ -66,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             var queryStatement : OpaquePointer? = nil
             
-            let queryStatementString : String = "select * from users where email = 'js@mail.com' and password = 'password1234'"
+            let queryStatementString : String = "select * from users where email = 'jdoe@mail.com' and password = 'password4321'"
             
             //UNCOMMENT THIS WHEN LOGIN CONTROLLER DONE AND REMOVE ABOVE QUERYSTATEMENT ^
             //let queryStatementString : String = "select * from users where email = '\(email)' and password = '\(password)'"
@@ -78,7 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     let cemail = sqlite3_column_text(queryStatement, 2)
                     let age = Int(sqlite3_column_int(queryStatement, 3))
                     let cpassword = sqlite3_column_text(queryStatement, 4)
-                    let streakid = Int(sqlite3_column_int(queryStatement, 5))
+                    let streak = Int(sqlite3_column_int(queryStatement, 5))
                     
                     let name = String(cString: cname!)
                     let email = String(cString: cemail!)
@@ -89,10 +88,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                         theEmail: email,
                                         theAge: age,
                                         thePassword: password,
-                                        theStreakId: streakid)
+                                        theStreak: streak)
                     
                     print("Query result")
-                    print("\(id) | \(name) | \(email) | \(age) | \(password) | \(streakid)")
+                    print("\(id) | \(name) | \(email) | \(age) | \(password) | \(streak)")
                                         
                 }
                 
@@ -111,9 +110,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     /**
         Created by: Martha Czerwik
-        Description:
+        Description: Pulls all rows from Streak table
      */
-    func getStreakData(streakId : Int){
+    func getStreakData(){
         var db : OpaquePointer? = nil
 
         if sqlite3_open(self.databasePath, &db) == SQLITE_OK {
@@ -122,7 +121,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             var queryStatement : OpaquePointer? = nil
             
-            let queryStatementString : String = "select * from streaks where id = \(streakId)"
+            let queryStatementString : String = "select * from streaks"
 
             if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
                 while sqlite3_step(queryStatement) == SQLITE_ROW {
@@ -132,11 +131,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     
                     let imageUrl = String(cString: cimageUrl!)
                    
-                    userStreak.initWithData(streakId: id,
-                                            streakDays: days,
-                                            streakImageUrl: imageUrl)
+                    let streak : Streak = Streak.init()
+                    streak.initWithData(streakId: id,
+                                        streakDays: days,
+                                        streakImageUrl: imageUrl)
+                    streaks.append(streak)
                     
-                    print("Query result")
+                    print("Query result for streak: ")
                     print("\(id) | \(days) | \(imageUrl)")
                                         
                 }
@@ -156,7 +157,57 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     /**
         Created by: Martha Czerwik
-        Description:
+        Description: Pulls the user's most recently achieved badge from Streaks table
+     */
+    func getCurrentStreak(days: Int){
+        var db : OpaquePointer? = nil
+
+        if sqlite3_open(self.databasePath, &db) == SQLITE_OK {
+            
+            print("Successfully opened connection to database at \(self.databasePath)")
+            
+            var queryStatement : OpaquePointer? = nil
+            
+            let queryStatementString : String = "select * from streaks where days <= \(days) order by days desc limit 1"
+
+            if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+                while sqlite3_step(queryStatement) == SQLITE_ROW {
+                    let id: Int = Int(sqlite3_column_int(queryStatement, 0))
+                    let days: Int = Int (sqlite3_column_int(queryStatement, 1))
+                    let cimageUrl = sqlite3_column_text(queryStatement, 2)
+                    
+                    let imageUrl = String(cString: cimageUrl!)
+                   
+                    usersCurrentStreak.initWithData(streakId: id,
+                                        streakDays: days,
+                                        streakImageUrl: imageUrl)
+                    
+                    
+                                    
+                    print("Query result for current streak: ")
+                    print("\(id) | \(days) | \(imageUrl)")
+                                        
+                }
+                
+                sqlite3_finalize(queryStatement)
+                
+            } else {
+                print("Select statement could not be prepared")
+            }
+            
+            sqlite3_close(db)
+            
+        } else {
+            print("Unable to open database")
+        }
+    } // end of getCurrentStreak
+    
+    
+    
+    
+    /**
+        Created by: Martha Czerwik
+        Description: Update User table when user edits their profile
      */
     func updateUser(userId : Int, userName : String, userEmail : String, userAge : Int) -> Bool {
         var db: OpaquePointer? = nil
