@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var user : User = User.init()
     var userStreak : Streak = Streak.init()
     
+    //var userTasks : Task = Task.init()
+    var userTasks : [String] = ["Task 1", "Task 2", "Task 3"]
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
