@@ -12,6 +12,7 @@
 /// clean up code, add comments
 
 import UIKit
+import Lottie
 
 class EditProfileViewController: UIViewController, UITextFieldDelegate {
 
@@ -20,6 +21,10 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var userAge : UITextField!
     @IBOutlet var userPassword : UITextField!
     @IBOutlet var userPasswordConfirm : UITextField!
+    @IBOutlet var dimmedView : UIView!
+    @IBOutlet var userAgeSlider : UISlider!
+    @IBOutlet var userAgeLabel : UILabel!
+    
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBAction func updateProfile(sender : UIButton){
@@ -45,7 +50,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
                         
             let updatedName = userName.text
             let updatedEmail = userEmail.text
-            let updatedAge = Int(userAge.text!)
+            let updatedAge = Int(userAgeLabel.text!)
                     
             print("Values to pass to update method: name= \(updatedName), email= \(updatedEmail), age= \(updatedAge)")
             let returnCode = mainDelegate.updateUser(userId: mainDelegate.user.id!, userName: updatedName!, userEmail: updatedEmail!, userAge: updatedAge!)
@@ -57,13 +62,30 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
                 present(alertController, animated: true)
             }
             
-                performSegue(withIdentifier: "UpdateProfileSegue", sender: self)
+            
+            animateCompletion()
+            dimmedView.alpha = 0.7
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+              self.performSegue(withIdentifier: "UpdateProfileSegue", sender: nil)
+            }
             
         }
     
     }
     
     
+    //ref: https://www.youtube.com/watch?v=1nzYysilBNo&ab_channel=DesignCode
+    func animateCompletion(){
+        let animationView = AnimationView(name:"completed")
+        animationView.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
+        
+        animationView.center = self.view.center
+       // animationView.contentMode = .scaleAspectFit
+        view.addSubview(animationView)
+        animationView.play()
+        animationView.loopMode = .playOnce
+    }
     override func viewDidLoad() {
         self.hideKeyboard()
         super.viewDidLoad()
@@ -71,9 +93,11 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
         userName.text = mainDelegate.user.name
         userEmail.text = mainDelegate.user.email
-        userAge.text = String(mainDelegate.user.age!)
+        //userAgeLabel.text = String(mainDelegate.user.age!)
+        userAgeSlider.value = Float(mainDelegate.user.age!)
         userPassword.text = mainDelegate.user.password
         userPasswordConfirm.text = mainDelegate.user.password
+        displayAge()
     }
     
     func checkPasswordsMatch() -> Bool{
@@ -92,7 +116,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
     func checkIfFieldsEmpty() -> Bool {
         var emptyFieldsExist = false
         
-        if (userName.text == "" || userEmail.text == "" || userAge.text == "" || userPassword.text == "" || userPasswordConfirm.text == "") {
+        if (userName.text == "" || userEmail.text == "" || userPassword.text == "" || userPasswordConfirm.text == "") {
             emptyFieldsExist = true
         } else {
             emptyFieldsExist = false
@@ -123,7 +147,16 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
         tap.cancelsTouchesInView = false
         return tap
     }
-
+    
+    func displayAge(){
+        let age = Int(userAgeSlider.value)
+        let ageStr = String(age)
+        userAgeLabel.text = ageStr
+    }
+    
+    @IBAction func sliderValueChanged(sender : UISlider){
+        displayAge()
+    }
     /*
     // MARK: - Navigation
 

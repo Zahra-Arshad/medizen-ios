@@ -33,6 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         checkAndCreateDatabase()
         getStreakData()
         
+    
+        
+        
+        
         return true
     }
     

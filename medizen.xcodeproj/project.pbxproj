@@ -16,6 +16,7 @@
 		4A8EB951261D368F005B3CE3 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EB950261D368F005B3CE3 /* TaskCell.swift */; };
 		4A8EB954261D371E005B3CE3 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EB953261D371E005B3CE3 /* TaskListViewController.swift */; };
 		4A8EB958261DA045005B3CE3 /* Medizen.db in Resources */ = {isa = PBXBuildFile; fileRef = 4A8EB957261DA045005B3CE3 /* Medizen.db */; };
+		4A8EB963261ED32D005B3CE3 /* completed.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A8EB962261ED32D005B3CE3 /* completed.json */; };
 		62667DBF2615DDA100BA2F96 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62667DBE2615DDA100BA2F96 /* AddUserViewController.swift */; };
 		62667DC92615E27E00BA2F96 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62667DC82615E27E00BA2F96 /* User.swift */; };
 		6289F31E2616122B005407C3 /* AddMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6289F31D2616122B005407C3 /* AddMedicineViewController.swift */; };
@@ -38,6 +39,7 @@
 		4A8EB950261D368F005B3CE3 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		4A8EB953261D371E005B3CE3 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		4A8EB957261DA045005B3CE3 /* Medizen.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = Medizen.db; path = ../../../../../../Users/czerwik/Medizen.db; sourceTree = "<group>"; };
+		4A8EB962261ED32D005B3CE3 /* completed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = completed.json; sourceTree = "<group>"; };
 		62667DBE2615DDA100BA2F96 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		62667DC62615E20600BA2F96 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		62667DC72615E20F00BA2F96 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -112,6 +114,7 @@
 				8DBA548A260E559400D89E8A /* AppDelegate.swift */,
 				8D3A53282614FE010014ABF8 /* Medication.swift */,
 				62667DC82615E27E00BA2F96 /* User.swift */,
+				8DBA548C260E559400D89E8A /* SceneDelegate.swift */,
 				4A59F8912616CF73007CCF41 /* Streak.swift */,
 				4A8EB950261D368F005B3CE3 /* TaskCell.swift */,
 			);
@@ -148,13 +151,13 @@
 			isa = PBXGroup;
 			children = (
 				4A8EB933261C1FDB005B3CE3 /* confetti.json */,
+				4A8EB962261ED32D005B3CE3 /* completed.json */,
 				4A8EB948261C6086005B3CE3 /* sad.json */,
 				62667DC12615DF7800BA2F96 /* Databases */,
 				8D3A53232614F7F20014ABF8 /* Storyboards */,
 				8D3A53222614F7E40014ABF8 /* Classes */,
 				8D3A53212614F7D30014ABF8 /* Assets */,
 				8D3A53202614F7B60014ABF8 /* View Controllers */,
-				8DBA548C260E559400D89E8A /* SceneDelegate.swift */,
 				8DBA5498260E559500D89E8A /* Info.plist */,
 			);
 			path = medizen;
@@ -227,6 +230,7 @@
 				8DBA5494260E559500D89E8A /* Assets.xcassets in Resources */,
 				4A8EB949261C6086005B3CE3 /* sad.json in Resources */,
 				8DBA5492260E559400D89E8A /* Main.storyboard in Resources */,
+				4A8EB963261ED32D005B3CE3 /* completed.json in Resources */,
 				4A8EB958261DA045005B3CE3 /* Medizen.db in Resources */,
 				4A8EB934261C1FDB005B3CE3 /* confetti.json in Resources */,
 			);
